@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Coletiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Seção de Login -->
+    <div id="loginSection">
+        <input type="password" id="password" placeholder="Digite sua senha">
+        <button onclick="login()">Login</button>
+        <h3>Atividades</h3>
+        <ul id="activityList"></ul> <!-- Lista de atividades visível na tela de login -->
+    </div>
+
+    <!-- Seção de Entrada (Visível após o login) -->
+    <div id="entrySection" style="display: none;">
+        <h2>Bem-vindo à Agenda Coletiva</h2>
+        <input type="text" id="activity" placeholder="Descrição da atividade">
+        <input type="date" id="dueDate">
+        <button id="addButton" onclick="addActivity()" style="display: none;">Adicionar Atividade</button>
+        <ul id="activityListLogged"></ul> <!-- Lista de atividades após o login -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
