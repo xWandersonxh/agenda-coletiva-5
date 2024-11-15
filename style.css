@@ -1,74 +1,108 @@
+/* Estilo geral */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f0f2f5;
+    height: 100vh;
 }
 
+/* Seções de login e entrada */
 #loginSection, #entrySection {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
     text-align: center;
 }
 
+/* Inputs e botões */
 input[type="password"], input[type="text"], input[type="date"] {
-    width: 100%;
-    padding: 8px;
+    width: calc(100% - 20px);
+    padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    border-radius: 4px;
-    color: #fff;
-    background-color: #007bff;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #45a049;
 }
 
-h2, h3 {
-    color: #333;
-}
-
+/* Lista de atividades */
 ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 10px;
 }
 
-li {
-    background-color: #e9ecef;
-    margin: 5px 0;
-    padding: 8px;
-    border-radius: 4px;
+ul li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.delete-btn {
-    background-color: #dc3545;
+/* Botão de remoção */
+button.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
     border: none;
-    color: #fff;
-    padding: 5px;
-    border-radius: 4px;
     cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-.delete-btn:hover {
-    background-color: #c82333;
+button.delete-btn:hover {
+    background-color: #ff3333;
+}
+
+/* Mensagem de boas-vindas */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Botão de notificações */
+#notificationButton {
+    background-color: #007BFF;
+    color: white;
+    margin-top: 15px;
+}
+
+#notificationButton:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    input[type="password"], input[type="text"], input[type="date"], button {
+        font-size: 14px;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
 }
