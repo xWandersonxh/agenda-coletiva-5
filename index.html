@@ -9,11 +9,10 @@
 <body>
     <!-- Seção de Login -->
     <div id="loginSection">
+        <h2>Agenda Coletiva</h2>
         <input type="password" id="password" placeholder="Digite sua senha">
         <button onclick="login()">Login</button>
-        <h3>Atividades</h3>
-        <ul id="activityList"></ul> <!-- Lista de atividades visível na tela de login -->
-        <button id="notificationButton" onclick="toggleNotifications()">Ativar Notificações</button>
+        <ul id="activityListLogin"></ul>
     </div>
 
     <!-- Seção de Entrada (Visível após o login) -->
@@ -21,8 +20,9 @@
         <h2>Bem-vindo à Agenda Coletiva</h2>
         <input type="text" id="activity" placeholder="Descrição da atividade">
         <input type="date" id="dueDate">
-        <button id="addButton" onclick="addActivity()" style="display: none;">Adicionar Atividade</button>
-        <ul id="activityListLogged"></ul> <!-- Lista de atividades após o login -->
+        <button onclick="addActivity()">Adicionar Atividade</button>
+        <ul id="activityList"></ul>
+        <button id="notificationButton" onclick="toggleNotifications()">Ativar/Desativar Notificações</button>
     </div>
 
     <script src="script.js"></script>
